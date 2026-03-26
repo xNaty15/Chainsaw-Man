@@ -89,20 +89,27 @@
   max-width: 1200px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1.15fr;
-  gap: 100px;
+  grid-template-columns: 1fr;
+  gap: 30px;
   align-items: center;
-  margin-left: 100px;
+  justify-items: center;
+}
+.heroPers-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* IZQUIERDA */
+
 .heroPers-title{
-  margin: 0 0 14px;
+   text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
   font-family: 'Oswald', sans-serif;
   font-weight: 800;
   letter-spacing: 4px;
   text-transform: uppercase;
-  line-height: .95;
+  line-height: 2;
   font-size: clamp(44px, 5vw, 82px);
   color: #fff;
   text-shadow: 0 0 40px rgba(255,255,255,.12);
@@ -150,7 +157,7 @@
   color: rgba(255,255,255,.92);
 }
 
-/* DERECHA (marco para tu carrusel) */
+
 .heroPers-right{
   padding: 20px;
   border-radius: 22px;
@@ -160,7 +167,7 @@
 
 }
 
-/* Responsive */
+
 @media (max-width: 980px){
   .heroPers-container{
     grid-template-columns: 1fr;

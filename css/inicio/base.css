@@ -1,33 +1,106 @@
-header{
+header {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.content{
+/* -------ツ  CONTENIDO  ツ--------- */
+
+.content {
   font-size: 20px;
-  height: 50vh;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #fff;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
 }
 
-.title{
-  font-size: 72px;
+/* -------ツ  TITULO  ツ--------- */
+
+.title {
+  font-size: clamp(36px, 8vw, 72px);
   color: #ff1a1a;
   text-align: center;
   font-weight: 800;
   letter-spacing: 3px;
   text-transform: uppercase;
   text-shadow: 0 0 80px #ff0000;
+  line-height: 1;
+  padding: 0 12px;
 }
 
+/* -------ツ  HEADER FONDO  ツ--------- */
 
-.header{
+.header {
   height: 100vh !important;
   background: url(../../assets/nayuta.gif) no-repeat center;
   background-size: cover;
   background-attachment: fixed;
+}
+
+
+
+/* -------ツ  LAPTOP NORMAL  ツ--------- */
+@media (max-width: 1200px) {
+  .content {
+    font-size: 18px;
+    min-height: 48vh;
+  }
+
+  .title {
+    letter-spacing: 2px;
+  }
+}
+
+/* -------ツ  TABLET  ツ--------- */
+@media (max-width: 992px) {
+  .content {
+    min-height: 45vh;
+    padding: 18px;
+  }
+
+  .title {
+    line-height: 1.05;
+  }
+}
+
+/* -------ツ  MOVIL  ツ--------- */
+@media (max-width: 768px) {
+  .header {
+    background-attachment: scroll; 
+    height: 80vh !important;
+  }
+
+  .content {
+    min-height: 40vh;
+    padding: 16px 10px;
+    font-size: 16px;
+  }
+
+  .title {
+    letter-spacing: 1.5px;
+    text-shadow: 0 0 40px #ff0000;
+  }
+}
+
+/* -------ツ  CELULAR PEQUEÑO  ツ--------- */
+@media (max-width: 480px) {
+  .header {
+    height: 70vh !important;
+  }
+
+  .content {
+    min-height: 35vh;
+    padding: 12px 8px;
+    font-size: 15px;
+  }
+
+  .title {
+    letter-spacing: 1px;
+    padding: 0 8px;
+  }
 }

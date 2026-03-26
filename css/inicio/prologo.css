@@ -1,12 +1,11 @@
-
-.resultados{
+.resultados {
   display: flex;
   gap: 40px;
   align-items: center;
   width: 90%;
   background-color: #C89588;
   background-image: linear-gradient(to right, #410101, #0B0614);
-  height: 650px;
+  min-height: 650px;
   border-radius: 20px;
   box-shadow:
     0 0 6px rgba(255, 0, 0, 0.6),
@@ -16,55 +15,55 @@
   margin-left: auto;
   margin-right: auto;
   padding: 20px 20px;
+  box-sizing: border-box;
 }
 
-.zonaResultados{
+.zonaResultados {
   height: auto;
-  
 }
 
-.zonaResultados p{
-  font-size: 25px;
-  margin: 20px 80px;
-  width: 80%;
+.zonaResultados p {
+  font-size: clamp(16px, 2vw, 25px);
+  margin: 20px clamp(20px, 6vw, 80px);
+  width: auto;
   align-self: center;
   color: white;
 }
 
-.zonaResultados #nompa{
+.zonaResultados #nompa {
   font-family: 'Oswald', sans-serif;
-  font-size: 64px;
+  font-size: clamp(34px, 6vw, 64px);
   font-weight: 900;
   font-style: italic;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #ffffff;
-  margin: 40px 60px 10px;
+  margin: 40px clamp(20px, 5vw, 60px) 10px;
   text-shadow:
     0 6px 0 rgba(0,0,0,.35),
     0 0 18px rgba(0,0,0,.45);
 }
 
-.zonatex{
+.zonatex {
   width: 58%;
-  height: 550px;
+  min-height: 550px;
   background-color: #0B0614;
   background-image: linear-gradient(to right, #0B0614, black);
   border-radius: 30px;
-  display: inline;
-  float: left;
   margin-bottom: 10px;
+  padding: 10px 0 20px;
+  box-sizing: border-box;
 }
 
-
-.zonaResultados .generos{
-  margin: 20px 80px 0;
-  width: 80%;
+.zonaResultados .generos {
+  margin: 20px clamp(20px, 6vw, 80px) 0;
+  width: auto;
   display: flex;
   flex-direction: column;
   gap: 14px;
 }
-.zonaResultados .generos-pill{
+
+.zonaResultados .generos-pill {
   display: inline-block;
   width: fit-content;
   padding: 10px 22px;
@@ -80,25 +79,26 @@
     0 10px 30px rgba(0,0,0,.35),
     0 0 0 3px rgba(255,255,0,.18);
 }
-.zonaResultados .generos-texto{
-  font-size: 25px;
+
+.zonaResultados .generos-texto {
+  font-size: clamp(16px, 2vw, 25px);
   color: #ffffff;
 }
 
-
-.img-big.img-4{
+.img-big.img-4 {
   background-image: url(../../assets/intro.gif);
 }
 
-.card-lateral{
+.card-lateral {
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.card-lateral .img-big{
-  width: 630px;
-  height: 360px;
+
+.card-lateral .img-big {
+  width: min(630px, 100%);
+  height: clamp(220px, 30vw, 360px);
   border-radius: 22px;
   background-color: rgba(0,0,0,.35);
   backdrop-filter: blur(2px);
@@ -110,9 +110,113 @@
     0 0 20px rgba(255,0,0,.35);
   transition: transform .25s ease, box-shadow .25s ease;
 }
-.card-lateral .img-big:hover{
+
+.card-lateral .img-big:hover {
   transform: translateY(-6px) scale(1.03);
   box-shadow:
     0 0 14px rgba(255,0,0,.6),
     0 0 40px rgba(255,0,0,.45);
+}
+
+/* -------ツ  LAPTOP NORMAL  ツ--------- */
+@media (max-width: 1200px) {
+  .resultados {
+    gap: 24px;
+    width: 94%;
+    padding: 18px;
+  }
+
+  .zonatex {
+    width: 55%;
+  }
+}
+
+/* -------ツ  TABLET  ツ--------- */
+@media (max-width: 992px) {
+  .resultados {
+    flex-direction: column;
+    min-height: auto;
+    gap: 20px;
+    padding: 20px 16px;
+  }
+
+  .zonatex {
+    width: 100%;
+    min-height: auto;
+    border-radius: 22px;
+  }
+
+  .card-lateral {
+    width: 100%;
+  }
+
+  .card-lateral .img-big {
+    width: min(560px, 100%);
+  }
+
+  .zonaResultados p,
+  .zonaResultados #nompa,
+  .zonaResultados .generos {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}
+
+/* -------ツ  MOVIL  ツ--------- */
+@media (max-width: 768px) {
+  .resultados {
+    width: 95%;
+    border-radius: 16px;
+    padding: 14px 12px;
+    gap: 16px;
+  }
+
+  .zonatex {
+    border-radius: 18px;
+    padding: 8px 0 16px;
+  }
+
+  .zonaResultados p,
+  .zonaResultados #nompa,
+  .zonaResultados .generos {
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .card-lateral .img-big {
+    border-radius: 16px;
+    height: 220px;
+  }
+
+  .zonaResultados .generos-pill {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}
+
+/* -------ツ  CELULAR PEQUEÑO  ツ--------- */
+@media (max-width: 480px) {
+  .resultados {
+    width: 96%;
+    padding: 10px;
+  }
+
+  .zonaResultados p,
+  .zonaResultados #nompa,
+  .zonaResultados .generos {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+
+  .card-lateral .img-big {
+    height: 180px;
+  }
+
+  .zonaResultados .generos {
+    gap: 10px;
+  }
+
+  .zonaResultados .generos-texto {
+    line-height: 1.5;
+  }
 }

@@ -1,5 +1,4 @@
-
-.tab{
+.tab {
   position: relative;
   clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
   box-shadow:
@@ -7,19 +6,21 @@
     inset 0 0 0 1px rgba(255,255,255,.10);
   transform: translateZ(0);
 }
-.tab:hover{
+
+.tab:hover {
   filter: drop-shadow(0 0 14px rgba(255,255,255,.08));
 }
 
+/* -------ツ  WRAP GENERAL  ツ--------- */
 
-.personajesWrap{
+.personajesWrap {
   width: 100%;
   display: flex;
   justify-content: center;
   margin: 40px 0 20px;
 }
 
-.carousel-frame{
+.carousel-frame {
   width: min(1150px, 92vw);
   margin: 0 auto;
   border-radius: 28px;
@@ -33,7 +34,9 @@
     0 0 60px rgba(140, 0, 0, .22);
 }
 
-#persCarousel .slideBox{
+/* -------ツ  SLIDE BOX  ツ--------- */
+
+#persCarousel .slideBox {
   min-height: 520px;
   padding-top: 24px;
   padding-bottom: 24px;
@@ -44,7 +47,7 @@
   justify-content: center;
 }
 
-#persCarousel .gridCards{
+#persCarousel .gridCards {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -53,7 +56,9 @@
   place-items: center;
 }
 
-#persCarousel .cardPers{
+/* -------ツ  CARDS  ツ--------- */
+
+#persCarousel .cardPers {
   width: 190px;
   height: 255px;
   border-radius: 22px;
@@ -65,14 +70,14 @@
   transition: .25s;
 }
 
-#persCarousel .cardPers .bg{
+#persCarousel .cardPers .bg {
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: center;
 }
 
-#persCarousel .cardPers .tagName{
+#persCarousel .cardPers .tagName {
   position: absolute;
   top: 14px;
   left: 14px;
@@ -85,41 +90,189 @@
   transition: .20s;
 }
 
-#persCarousel .cardPers .ov{
+#persCarousel .cardPers .ov {
   position: absolute;
   inset: 0;
   background: rgba(0,0,0,0.10);
   transition: .25s;
 }
 
-#persCarousel .cardPers .info{
+#persCarousel .cardPers .info {
   position: absolute;
-  left: 0; right: 0; bottom: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   padding: 12px 12px 14px;
   transform: translateY(10px);
   opacity: 0;
   transition: .25s;
 }
-#persCarousel .cardPers .info .name{
+
+#persCarousel .cardPers .info .name {
   color: #ff1a1a;
   font-weight: 900;
   font-size: 18px;
   line-height: 1.1;
 }
-#persCarousel .cardPers .info .desc{
+
+#persCarousel .cardPers .info .desc {
   color: rgba(255,255,255,.88);
   font-size: 12px;
   margin-top: 4px;
 }
 
-#persCarousel .cardPers:hover{
+#persCarousel .cardPers:hover {
   border-color: rgba(255,26,26,.9);
   box-shadow: 0 0 40px rgba(255,26,26,.35), 0 18px 45px rgba(0,0,0,.55);
   transform: translateY(-2px);
 }
-#persCarousel .cardPers:hover .ov{ background: rgba(0,0,0,0.70); }
-#persCarousel .cardPers:hover .tagName{ opacity: 0; }
-#persCarousel .cardPers:hover .info{
+
+#persCarousel .cardPers:hover .ov {
+  background: rgba(0,0,0,0.70);
+}
+
+#persCarousel .cardPers:hover .tagName {
+  opacity: 0;
+}
+
+#persCarousel .cardPers:hover .info {
   transform: translateY(0);
   opacity: 1;
+}
+
+
+/* -------ツ  LAPTOP NORMAL  ツ--------- */
+@media (max-width: 1200px) {
+  .carousel-frame {
+    width: min(1100px, 95vw);
+    padding: 22px 20px 30px;
+  }
+
+  #persCarousel .slideBox {
+    min-height: 500px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  #persCarousel .gridCards {
+    column-gap: 14px;
+    row-gap: 14px;
+  }
+
+  #persCarousel .cardPers {
+    width: 170px;
+    height: 235px;
+  }
+
+  #persCarousel .cardPers .tagName {
+    font-size: 18px;
+  }
+}
+
+/* -------ツ  TABLET GRANDE  ツ--------- */
+@media (max-width: 992px) {
+  .carousel-frame {
+    width: 96vw;
+    border-radius: 22px;
+    padding: 20px 16px 26px;
+  }
+
+  #persCarousel .slideBox {
+    min-height: auto;
+    padding: 20px 24px;
+  }
+
+  #persCarousel .gridCards {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 14px;
+    row-gap: 16px;
+  }
+
+  #persCarousel .cardPers {
+    width: 180px;
+    height: 245px;
+  }
+}
+
+/* -------ツ  TABLET / MOVIL GRANDE  ツ--------- */
+@media (max-width: 768px) {
+  .personajesWrap {
+    margin: 28px 0 16px;
+  }
+
+  .carousel-frame {
+    width: 96vw;
+    padding: 16px 12px 22px;
+    border-radius: 18px;
+  }
+
+  #persCarousel .slideBox {
+    padding: 16px 10px;
+  }
+
+  #persCarousel .gridCards {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 12px;
+    row-gap: 14px;
+  }
+
+  #persCarousel .cardPers {
+    width: 100%;
+    max-width: 190px;
+    height: 230px;
+  }
+
+  #persCarousel .cardPers .tagName {
+    font-size: 17px;
+    top: 12px;
+    left: 12px;
+  }
+
+  #persCarousel .cardPers .info .name {
+    font-size: 16px;
+  }
+
+  #persCarousel .cardPers .info .desc {
+    font-size: 11px;
+  }
+}
+
+/* -------ツ  CELULAR PEQUEÑO  ツ--------- */
+@media (max-width: 480px) {
+  .carousel-frame {
+    width: 97vw;
+    padding: 14px 8px 18px;
+    border-radius: 14px;
+  }
+
+  #persCarousel .slideBox {
+    padding: 12px 4px;
+  }
+
+  #persCarousel .gridCards {
+    grid-template-columns: 1fr;
+    row-gap: 12px;
+  }
+
+  #persCarousel .cardPers {
+    max-width: 220px;
+    height: 245px;
+  }
+
+  #persCarousel .cardPers .tagName {
+    font-size: 16px;
+  }
+
+  #persCarousel .cardPers .info {
+    padding: 10px 10px 12px;
+  }
+
+  #persCarousel .cardPers .info .name {
+    font-size: 15px;
+  }
+
+  #persCarousel .cardPers .info .desc {
+    font-size: 11px;
+    margin-top: 3px;
+  }
 }

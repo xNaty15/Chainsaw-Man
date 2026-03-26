@@ -11,14 +11,28 @@ header {
     background-attachment: fixed;
 }
 
+/* -------ツ  TITULOS  ツ--------- */
+
 .title {
     margin-bottom: 0px;
-    font-size: 80px;
+    font-size: clamp(40px, 8vw, 80px);
     font-weight: 600;
     text-transform: uppercase;
-    color: blac;
+    color: black;
     text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
 }
+
+.title {
+    font-size: clamp(40px, 8vw, 72px);
+    color: #ff1a1a;
+    text-align: center;
+    font-weight: 800;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-shadow: 0 0 80px #ff0000;
+}
+
+/* -------ツ  CONTENIDO GENERAL  ツ--------- */
 
 .p {
     margin-bottom: 40px;
@@ -26,6 +40,7 @@ header {
 }
 
 .content {
+    font-size: 20px;
     height: 50vh;
     display: flex;
     flex-direction: column;
@@ -34,220 +49,228 @@ header {
     color: #fff;
 }
 
-.manga {
-    /*background: #410101;*/
+/* -------ツ  SECCIONES  ツ--------- */
+
+.manga,
+.historia,
+.secciones {
     background-color: #410101;
     background-image: linear-gradient(to right, #410101, #0B0614);
     height: auto;
 }
 
-.contenidoM {
-    width: 90%;
-    height: 200px;
-    background-color: #C89588;
-    background-image: linear-gradient(to right, #C89588, #5A4C5D);
+/* -------ツ  CONTENIDO TEXTO  ツ--------- */
+
+.parrafoscontenido {
+    padding: 30px clamp(20px, 6vw, 80px);
+    font-size: clamp(16px, 2vw, 30px);
+    letter-spacing: 1px;
+    text-align: left;
 }
+
+/* -------ツ  TITULOS H2 Y H3  ツ--------- */
 
 h2 {
     letter-spacing: 2px;
-    font-size: 75px;
-    margin-top: 20px;
+    font-size: clamp(36px, 7vw, 75px);
     margin: 10px;
     text-align: center;
     text-transform: uppercase;
 }
 
-.parrafoscontenido {
-    padding-left: 80px;
-    padding-right: 60px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    font-size: 30px;
-    letter-spacing: 1px;
-    justify-content: left;
-    align-items: left;
-    text-align: left;
+h3 {
+    letter-spacing: 2px;
+    font-size: clamp(28px, 5vw, 60px);
+    margin: 20px;
+    text-align: center;
+    text-transform: capitalize;
 }
 
-.jjk0fondoImg{
-  background: url(../assets/nat.gif) no-repeat center;
-  background-size: cover;
-  padding: 200px 0;
-}
+/* -------ツ  FONDOS  ツ--------- */
 
-.quotes{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px 30px;
-}
-.quotes p{
-  font-size: 52px;
-  color: #250341;
-  text-align: center;
-  font-family: 'Oswald', sans-serif;
-  font-weight: 800;
-  font-style: italic;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  text-shadow: 0 2px 6px rgba(64, 13, 99, 0.65);
-}
-.imagenes {
-    background-image: url(../assets/makima.gif);
+.jjk0fondoImg {
+    background: url(../assets/nat.gif) no-repeat center;
     background-size: cover;
-    height: 80vh;
-    background-attachment: fixed;
+    padding: clamp(100px, 20vh, 200px) 0;
 }
-.imagenes2{
-    background-image: url(../assets/united.gif);
+
+.imagenes,
+.imagenes2 {
     background-size: cover;
     height: 80vh;
     width: 100%;
     background-attachment: fixed;
 }
 
-.parrafoscontenido {
-    padding-left: 80px;
-    padding-right: 60px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    font-size: 30px;
-    letter-spacing: 1px;
-    justify-content: left;
-    align-items: left;
-    text-align: left;
+.imagenes {
+    background-image: url(../assets/makima.gif);
 }
 
-h3 {
+.imagenes2 {
+    background-image: url(../assets/united.gif);
+}
 
-    letter-spacing: 2px;
-    font-size: 60px;
-    margin-top: 20px;
-    margin-left: 30px;
+/* -------ツ  QUOTES  ツ--------- */
+
+.quotes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 30px;
+}
+
+.quotes p {
+    font-size: clamp(22px, 4vw, 52px);
+    color: #250341;
     text-align: center;
-    text-transform: capitalize;
+    font-weight: 800;
+    font-style: italic;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 2px 6px rgba(64, 13, 99, 0.65);
+}
+
+/* -------ツ  CAJAS  ツ--------- */
+
+.contenidocaja,
+.contenidocajacontinuacion {
+    margin: 50px auto;
+    width: 90%;
+    max-width: 1200px;
+    background-color: #0B0614;
+    background-image: linear-gradient(to left, #0d071a, #250101);
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
 }
 
 .contenidocajacontinuacion {
-    margin-left: 200px;
-    margin-right: 200px;
-    background-color: #0B0614;
-    background-image: linear-gradient(to left, #0d071a, #250101);
     border-radius: 0 0 20px 20px;
-    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
 }
 
-.contenidocaja {
-    margin-top: 50px;
-    margin-left: 200px;
-    margin-right: 200px;
-    background-color: #0B0614;
-    background-image: linear-gradient(to left, #0d071a, #250101);
-    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
-}
-
-.secciones {
-    /*background: #410101;*/
-    background-color: #410101;
-    background-image: linear-gradient(to right, #410101, #0B0614);
-    height: auto;
-}
+/* -------ツ  IMAGENES  ツ--------- */
 
 img {
     border-radius: 2%;
+    max-width: 100%;
+    height: auto;
 }
-.gege{
+
+/* -------ツ  SECCION GEGE  ツ--------- */
+
+.gege {
     display: flex;
-    flex-direction: row;
-    align-content: center;
     justify-content: space-evenly;
-    height: 125vh;
+    align-items: center;
+    gap: 20px;
     width: 90%;
+    margin: auto;
 }
+
 .gegeText {
-    padding-left: 2%;
-    
-    font-size: 30px;
-    letter-spacing: 1px;
-    justify-content: left;
-    align-items: left;
-    text-align: center;
-    float: left;
+    font-size: clamp(16px, 2vw, 30px);
     width: 60%;
-    height: 115vh;
-    background-color: #0B0614;
     background-image: linear-gradient(to right, #0B0614, black);
     border-radius: 10% 0% 0% 10%;
     box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
 }
 
 .gegeImg {
-    padding-right: 0%;
     width: 40%;
-    height: 115vh;
-    float: right;
-    background-color: #0B0614;
     background-image: linear-gradient(to right, #0B0614, black);
     border-radius: 0% 10% 10% 0%;
     box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.5);
 }
 
 .gegeImg img {
-    float: right;
     width: 100%;
-    height: 115vh;
+    height: 100%;
     object-fit: cover;
-    border-radius: 0% 10% 10% 0%;
 }
 
+/* -------ツ  POSTER TEXTO  ツ--------- */
 
-
-
-
-
-
-.content{
-  font-size: 20px;
-  height: 50vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
+.poster-text {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    max-width: 520px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
 }
 
-.historia{
-  background-color: #410101;
-  background-image: linear-gradient(to right, #410101, #0B0614);
-  height: auto;
+.poster-text h1 {
+    font-size: clamp(40px, 8vw, 84px);
+    font-weight: 900;
+    margin-top: 10px;
+    color: rgba(255, 40, 40, 0.85);
 }
 
-.title{
-  font-size: 72px;
-  color: #ff1a1a;
-  text-align: center;
-  font-weight: 800;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  text-shadow: 0 0 80px #ff0000;
+/* =========================================================
+   -------ツ  RESPONSIVE  ツ---------
+========================================================= */
+
+/* -------ツ  TABLET  ツ--------- */
+@media (max-width: 992px) {
+
+    .gege {
+        flex-direction: column;
+    }
+
+    .gegeText,
+    .gegeImg {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .poster-text {
+        left: 5%;
+        max-width: 90%;
+    }
 }
 
+/* -------ツ  MOVIL  ツ--------- */
+@media (max-width: 768px) {
 
+    .header {
+        background-attachment: scroll; /* IMPORTANTE para celular */
+    }
 
-.poster-text{
-  position: absolute;
-  top: 50%;
-  left: 8%;
-  transform: translateY(-50%);
-  max-width: 520px;
-  font-family: 'Oswald', sans-serif;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.75);
+    .imagenes,
+    .imagenes2 {
+        background-attachment: scroll;
+        height: 60vh;
+    }
+
+    .content {
+        height: auto;
+        padding: 40px 10px;
+    }
+
+    .poster-text {
+        position: static;
+        transform: none;
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    .quotes {
+        padding: 20px 10px;
+    }
 }
 
-.poster-text h1{
-  font-size: 84px;
-  font-weight: 900;
-  margin-top: 10px;
-  color: rgba(255, 40, 40, 0.85);
+/* -------ツ  CELULAR PEQUEÑO  ツ--------- */
+@media (max-width: 480px) {
+
+    .imagenes,
+    .imagenes2 {
+        height: 50vh;
+    }
+
+    .content {
+        padding: 30px 8px;
+    }
+
+    .poster-text h1 {
+        font-size: 32px;
+    }
 }
