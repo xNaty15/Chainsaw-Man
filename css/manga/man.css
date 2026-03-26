@@ -1,0 +1,94 @@
+/* ===== ANNOUNCE STYLE (tipo Valorant) ===== */
+.announce{
+  position: relative;
+  width: 100%;
+  height: 520px;
+  overflow: hidden;
+  background: #000;
+  font-family: 'Oswald', sans-serif;
+}
+
+/* Imagen de fondo */
+.announce-bg{
+  position: absolute;
+  inset: 0;
+  background-image: url("../../assets/mrm.webp"); /* 👈 CAMBIÁS ESTA */
+  background-size: cover;
+  background-position: center;
+  filter: brightness(.65);
+}
+
+/* Contenido principal */
+.announce-content{
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  padding: 80px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 600px;
+}
+
+/* Etiqueta chica arriba */
+.announce-tag{
+  color: #ff1a1a;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+/* Título grande */
+.announce-title{
+  color: #fff;
+  font-size: 78px;
+  font-weight: 900;
+  line-height: .95;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* Subtexto */
+.announce-sub{
+  color: rgba(255,255,255,.75);
+  font-size: 18px;
+  margin: 16px 0 30px;
+}
+
+/* Botón amarillo neón */
+.announce-btn{
+  width: fit-content;
+  padding: 14px 38px;
+  background: #f2f200;
+  color: #000;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  box-shadow:
+    0 0 15px rgba(242,242,0,.9),
+    0 0 40px rgba(242,242,0,.6);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.announce-btn:hover{
+  transform: translateY(-3px);
+  box-shadow:
+    0 0 25px rgba(242,242,0,1),
+    0 0 60px rgba(242,242,0,.8);
+}
+
+/* Texto vertical a la derecha */
+.announce-side{
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+  writing-mode: vertical-rl;
+  font-size: 150px;
+  font-weight: 900;
+  color: rgba(211, 26, 41, 0.85);
+  letter-spacing: 6px;
+  z-index: 2;
+}

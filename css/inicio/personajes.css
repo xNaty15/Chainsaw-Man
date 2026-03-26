@@ -1,0 +1,125 @@
+
+.tab{
+  position: relative;
+  clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.35),
+    inset 0 0 0 1px rgba(255,255,255,.10);
+  transform: translateZ(0);
+}
+.tab:hover{
+  filter: drop-shadow(0 0 14px rgba(255,255,255,.08));
+}
+
+
+.personajesWrap{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 40px 0 20px;
+}
+
+.carousel-frame{
+  width: min(1150px, 92vw);
+  margin: 0 auto;
+  border-radius: 28px;
+  padding: 26px 26px 38px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(10, 14, 18, .35);
+  backdrop-filter: blur(16px);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.06) inset,
+    0 30px 90px rgba(0,0,0,.50),
+    0 0 60px rgba(140, 0, 0, .22);
+}
+
+#persCarousel .slideBox{
+  min-height: 520px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  padding-right: 90px;
+  padding-left: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#persCarousel .gridCards{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 18px;
+  row-gap: 18px;
+  place-items: center;
+}
+
+#persCarousel .cardPers{
+  width: 190px;
+  height: 255px;
+  border-radius: 22px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow: 0 18px 45px rgba(0,0,0,.45);
+  transform: translateZ(0);
+  transition: .25s;
+}
+
+#persCarousel .cardPers .bg{
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+#persCarousel .cardPers .tagName{
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 5;
+  color: #ff1a1a;
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: .5px;
+  text-shadow: 0 0 16px rgba(255,26,26,.65);
+  transition: .20s;
+}
+
+#persCarousel .cardPers .ov{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.10);
+  transition: .25s;
+}
+
+#persCarousel .cardPers .info{
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: 12px 12px 14px;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: .25s;
+}
+#persCarousel .cardPers .info .name{
+  color: #ff1a1a;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 1.1;
+}
+#persCarousel .cardPers .info .desc{
+  color: rgba(255,255,255,.88);
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+#persCarousel .cardPers:hover{
+  border-color: rgba(255,26,26,.9);
+  box-shadow: 0 0 40px rgba(255,26,26,.35), 0 18px 45px rgba(0,0,0,.55);
+  transform: translateY(-2px);
+}
+#persCarousel .cardPers:hover .ov{ background: rgba(0,0,0,0.70); }
+#persCarousel .cardPers:hover .tagName{ opacity: 0; }
+#persCarousel .cardPers:hover .info{
+  transform: translateY(0);
+  opacity: 1;
+}

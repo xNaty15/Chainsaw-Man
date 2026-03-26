@@ -1,0 +1,289 @@
+/* ========= SECCIÓN CONTRATOS ========= */
+.contratos-section {
+    width: 100%;
+    padding: 40px 40px 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.contratos-layout {
+    width: 100%;
+    max-width: 1400px;
+}
+
+/* ========= PANEL PRINCIPAL ========= */
+.contrato-display {
+    position: relative;
+    width: 100%;
+    min-height: 720px;
+    background: #050505;
+    overflow: hidden;
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.45);
+}
+
+/* Fondo para que vos pongás tu imagen */
+.contrato-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(to right, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.88) 38%, rgba(0, 0, 0, 0.40) 68%, rgba(0, 0, 0, 0.70) 100%),
+        url("../assets/placeholder-fondo.jpg") center/cover no-repeat;
+    opacity: 1;
+    z-index: 1;
+}
+
+/* ========= INFO IZQUIERDA ========= */
+.contrato-info {
+    position: relative;
+    z-index: 3;
+    width: 48%;
+    padding: 95px 40px 60px 70px;
+    color: white;
+}
+
+.contrato-mini {
+    font-family: "Oswald", sans-serif;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.65);
+    margin-bottom: 20px;
+}
+
+.contrato-title {
+    font-family: "Oswald", sans-serif;
+    font-size: 88px;
+    line-height: 0.95;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+    margin: 0 0 35px 0;
+    max-width: 600px;
+}
+
+.contrato-frase-box {
+    display: inline-block;
+    background: linear-gradient(90deg, #9b0000 0%, #d31111 60%, #7c0000 100%);
+    padding: 28px 34px;
+    margin-bottom: 28px;
+    min-width: 430px;
+    max-width: 560px;
+    box-shadow: 0 10px 30px rgba(140, 0, 0, 0.35);
+}
+
+.contrato-frase {
+    font-family: "Oswald", sans-serif;
+    font-size: 26px;
+    line-height: 1.25;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0;
+    color: white;
+}
+
+.contrato-desc {
+    width: 82%;
+    font-size: 16px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.82);
+    margin-top: 10px;
+}
+
+/* ========= IMAGEN PERSONAJE ========= */
+.contrato-character {
+    position: absolute;
+    right: 240px;
+    bottom: 0;
+    z-index: 4;
+    width: 36%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    pointer-events: none;
+}
+
+.contrato-character img {
+    width: 100%;
+    max-height: 680px;
+    object-fit: contain;
+    filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.55));
+}
+
+/* ========= OPCIONES VERTICALES ========= */
+.contrato-sidebar {
+    position: absolute;
+    top: 50%;
+    right: 38px;
+    transform: translateY(-50%);
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 260px;
+    align-items: flex-start;
+}
+
+.contrato-sidebar-line {
+    position: absolute;
+    left: 13px;
+    top: -25px;
+    width: 2px;
+    height: calc(100% + 50px);
+    background: rgba(255, 255, 255, 0.18);
+    z-index: 1;
+}
+
+.contrato-option {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: rgba(255, 255, 255, 0.70);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 16px;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.25s ease;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.contrato-option .dot {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.45);
+    border-radius: 50%;
+    background: transparent;
+    transition: all 0.25s ease;
+}
+
+.contrato-option .option-text {
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.contrato-option:hover {
+    color: white;
+    transform: translateX(-4px);
+}
+
+.contrato-option.active {
+    background: linear-gradient(90deg, #c60000 0%, #ff1616 100%);
+    color: white;
+    box-shadow: 0 10px 25px rgba(170, 0, 0, 0.30);
+}
+
+.contrato-option.active .dot {
+    border-color: white;
+    background: white;
+}
+
+/* ========= RESPONSIVE ========= */
+@media (max-width: 1200px) {
+    .contrato-title {
+        font-size: 64px;
+    }
+
+    .contrato-frase {
+        font-size: 22px;
+    }
+
+    .contrato-character {
+        width: 34%;
+        right: 220px;
+    }
+
+    .contrato-sidebar {
+        width: 220px;
+    }
+
+    .contrato-option .option-text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    .contrato-display {
+        min-height: auto;
+        padding-bottom: 40px;
+    }
+
+    .contrato-info {
+        width: 100%;
+        padding: 60px 30px 30px;
+    }
+
+    .contrato-title {
+        font-size: 52px;
+    }
+
+    .contrato-frase-box {
+        min-width: auto;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .contrato-desc {
+        width: 100%;
+    }
+
+    .contrato-character {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto 30px;
+        padding: 0 20px;
+    }
+
+    .contrato-sidebar {
+        position: relative;
+        top: auto;
+        right: auto;
+        transform: none;
+        width: 100%;
+        padding: 0 20px 20px;
+        gap: 10px;
+    }
+
+    .contrato-sidebar-line {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .contratos-section {
+        padding: 20px 12px 60px;
+    }
+
+    .contrato-title {
+        font-size: 40px;
+    }
+
+    .contrato-frase {
+        font-size: 18px;
+    }
+
+    .contrato-option .option-text {
+        font-size: 15px;
+    }
+}
+
+
+
+
+
+
+

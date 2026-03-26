@@ -1,0 +1,33 @@
+header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content{
+  font-size: 20px;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.title{
+  font-size: 72px;
+  color: #ff1a1a;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-shadow: 0 0 80px #ff0000;
+}
+
+
+.header{
+  height: 100vh !important;
+  background: url(../../assets/nayuta.gif) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+}

@@ -1,0 +1,105 @@
+
+.soundtrack-section{
+  padding: 60px 0;
+  background: linear-gradient(to right, #410101, #0B0614);
+}
+
+.soundtrack-wrap{
+  width: min(1150px, 92vw);
+  margin: 0 auto;
+  border-radius: 28px;
+  padding: 36px 26px 42px;
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(0,0,0,.45);
+  backdrop-filter: blur(14px);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.06) inset,
+    0 30px 90px rgba(0,0,0,.55),
+    0 0 60px rgba(140, 0, 0, .22);
+  position: relative;
+  overflow: hidden;
+}
+
+.soundtrack-divider{
+  height: 3px;
+  width: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, rgba(255,26,26,0), rgba(255,26,26,.95), rgba(255,26,26,0));
+  box-shadow: 0 0 18px rgba(255,26,26,.35);
+  margin-bottom: 18px;
+}
+
+.soundtrack-title{
+  margin: 0;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 62px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ff1a1a;
+  text-shadow: 0 0 80px #ff0000;
+}
+
+.soundtrack-sub{
+  margin: 10px 0 28px;
+  text-align: center;
+  color: rgba(255,255,255,.75);
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.soundtrack-grid{
+  display: flex;
+  justify-content: center;
+  gap: 34px;
+  flex-wrap: wrap;
+}
+
+.soundtrack-item{
+  display: grid;
+  place-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.soundtrack-section .soundtrack-img{
+  width: 190px;
+  height: 190px;
+  border-radius: 999px;
+  box-shadow:
+    0 0 0 2px rgba(255,255,255,.08),
+    0 0 0 1px rgba(255,0,0,.25) inset,
+    0 14px 35px rgba(0,0,0,.55);
+  transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
+
+  background-size: contain !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgba(0,0,0,.55);
+}
+
+.soundtrack-section .soundtrack-item:hover .soundtrack-img{
+  transform: translateY(-6px) scale(1.02);
+  box-shadow:
+    0 0 12px rgba(255,0,0,.55),
+    0 0 28px rgba(255,0,0,.35),
+    0 18px 45px rgba(0,0,0,.60);
+}
+
+.soundtrack-label{
+  font-family: 'Oswald', sans-serif;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.88);
+  font-size: 14px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.35);
+}
+
+.soundtrack-section .img-1{ background-image: url(../../assets/kickback.jpg); }
+.soundtrack-section .img-3{ background-image: url(../../assets/pool.jpg); }
+.soundtrack-section .img-4{ background-image: url(../../assets/irisout.jpg); }

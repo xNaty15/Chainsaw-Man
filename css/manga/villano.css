@@ -1,0 +1,283 @@
+/* ====== Sección estilo "Starting Soon" ====== */
+.villano{
+  padding: 70px 24px;
+  background: radial-gradient(1200px 500px at 50% 10%, rgba(138,43,226,.25), transparent 60%),
+              radial-gradient(900px 420px at 20% 40%, rgba(0,255,255,.12), transparent 55%),
+              #07060b;
+  color: #f2f2f2;
+  overflow: hidden;
+}
+
+.villano-wrap{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr 1fr;
+  gap: 26px;
+  align-items: center;
+}
+
+/* ====== Imagen izquierda ====== */
+.villano-left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.villano-img{
+  width: 100%;
+  max-width: 360px;
+  border-radius: 18px;
+  filter: contrast(1.1) saturate(1.05);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.08),
+    0 0 35px rgba(128,0,255,.22);
+  transform: translateZ(0);
+}
+
+/* ====== Título gigante centro ====== */
+.villano-center{
+  text-align: center;
+}
+
+.villano-title{
+  font-family: 'Oswald', sans-serif;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  line-height: .88;
+  font-size: clamp(52px, 6vw, 92px);
+  margin: 0;
+  text-shadow:
+    0 0 22px rgba(170,80,255,.45),
+    0 0 60px rgba(0,255,255,.18);
+}
+
+.villano-sub{
+  margin: 10px 0 0;
+  opacity: .75;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+----
+.makima-card-valorant{
+  max-width: 480px;
+  padding: 26px 28px;
+  background: linear-gradient(
+    160deg,
+    rgba(255,255,255,.06),
+    rgba(255,255,255,.015)
+  );
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow:
+    0 0 0 1px rgba(0,0,0,.35) inset,
+    0 0 40px rgba(255,40,40,.12);
+  backdrop-filter: blur(14px);
+}
+
+/* Botón tipo JETT */
+.makima-tag{
+  display: inline-block;
+  padding: 4px 12px;
+  margin-bottom: 14px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 999px;
+  background: rgba(255,60,60,.15);
+  color: #ff9a9a;
+  border: 1px solid rgba(255,60,60,.45);
+}
+
+/* Nombre grande */
+.makima-name{
+  margin: 0 0 18px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 52px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+/* Contenedor texto + línea */
+.makima-text-wrap{
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+
+  padding: 16px 18px;
+  border-radius: 14px;
+
+  background: rgba(0,0,0,.35);
+  border: 1px solid rgba(255,255,255,.10);
+
+  box-shadow:
+    0 0 0 1px rgba(0,0,0,.45) inset,
+    0 0 25px rgba(255,40,40,.12);
+}
+
+/* Línea roja */
+.makima-line{
+  width: 4px;
+  border-radius: 4px;
+  background: linear-gradient(
+    to bottom,
+    #ff2a2a,
+    #ff6a6a
+  );
+  box-shadow: 0 0 14px rgba(255,60,60,.8);
+}
+
+/* Texto */
+.makima-desc{
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: rgba(255,255,255,.82);
+}
+
+/* ====== 4 Jinetes + botones neon ====== */
+.jinetes{
+  max-width: 1200px;
+  margin: 28px auto 0;
+  padding-top: 26px;
+  border-top: 1px solid rgba(255,255,255,.10);
+  text-align: center;
+}
+
+.jinetes-title{
+  margin: 0 0 14px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 35px rgba(170,80,255,.35);
+}
+
+.jinetes-buttons{
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.neon-btn{
+  padding: 12px 18px;
+  border-radius: 14px;
+  background: rgba(0,0,0,.35);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.12);
+  cursor: pointer;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform .15s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.neon-btn:hover{
+  transform: translateY(-2px);
+}
+
+.neon-purple{
+  border-color: rgba(180,90,255,.55);
+  box-shadow:
+    0 0 0 1px rgba(0,0,0,.25) inset,
+    0 0 20px rgba(180,90,255,.35),
+    0 0 55px rgba(180,90,255,.22);
+}
+
+.neon-purple:hover{
+  box-shadow:
+    0 0 0 1px rgba(0,0,0,.25) inset,
+    0 0 28px rgba(180,90,255,.55),
+    0 0 75px rgba(180,90,255,.30);
+}
+
+.neon-blue{
+  border-color: rgba(0,220,255,.55);
+  box-shadow:
+    0 0 0 1px rgba(0,0,0,.25) inset,
+    0 0 20px rgba(0,220,255,.30),
+    0 0 55px rgba(0,220,255,.18);
+}
+
+.neon-blue:hover{
+  box-shadow:
+    0 0 0 1px rgba(0,0,0,.25) inset,
+    0 0 28px rgba(0,220,255,.50),
+    0 0 75px rgba(0,220,255,.28);
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 980px){
+  .villano-wrap{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .villano-right .villano-card{
+    max-width: 520px;
+  }
+  .villano-img{
+    max-width: 420px;
+  }
+}
+
+
+/* contenedor general */
+.img-makima-wrap{
+  position: relative;
+  width: 320px;      /* ajustá al tamaño que uses */
+  height: 480px;
+}
+
+/* borde morado detrás */
+.img-makima-border{
+  position: absolute;
+  top: 14px;
+  left: -14px;       /* 👈 se corre a la izquierda */
+  width: 100%;
+  height: 100%;
+  border-radius: 22px;
+
+  background: linear-gradient(
+    135deg,
+    #a855f7,
+    #7c3aed
+  );
+
+  box-shadow:
+    0 0 25px rgba(168,85,247,.6),
+    0 0 60px rgba(124,58,237,.45);
+
+  z-index: 1;
+}
+
+/* imagen encima */
+.img-makima{
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 22px;
+
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,.08),
+    0 20px 60px rgba(0,0,0,.6);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

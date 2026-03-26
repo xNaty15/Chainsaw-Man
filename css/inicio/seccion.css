@@ -1,0 +1,169 @@
+
+.jjk0fondoImg{
+  background: url(../../assets/festival.gif) no-repeat center;
+  background-size: cover;
+  padding: 200px 0;
+}
+
+.quotes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 30px;
+}
+.quotes p{
+  font-size: 52px;
+  color: #250341;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 0 2px 6px rgba(64, 13, 99, 0.65);
+}
+
+.borde{
+  width: 800px;
+  display: block;
+  margin: 0 auto;
+  filter:
+    drop-shadow(0 0 6px rgba(255, 0, 0, 1))
+    drop-shadow(0 0 18px rgba(255, 0, 0, 0.9))
+    drop-shadow(0 0 40px rgba(255, 0, 0, 0.7));
+}
+
+.bomb{
+  position: relative;
+  width: 100%;
+  min-height: 520px;
+  background-image: url("../../assets/q.png");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.poster-text{
+  position: absolute;
+  top: 50%;
+  left: 8%;
+  transform: translateY(-50%);
+  max-width: 520px;
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.75);
+}
+.poster-text h2,
+
+.poster-text h3{
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 1;
+}
+.poster-text h1{
+  font-size: 84px;
+  font-weight: 900;
+  margin-top: 10px;
+  color: rgba(255, 40, 40, 0.85);
+}
+.poster-text .sub{
+  margin-top: 22px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  opacity: 0.6;
+}
+
+
+
+
+.heroPers{
+  padding: 70px 24px;
+  background:
+    radial-gradient(900px 450px at 20% 40%, rgba(0, 255, 200, .10), transparent 60%),
+    radial-gradient(900px 450px at 80% 40%, rgba(170, 80, 255, .12), transparent 60%),
+    linear-gradient(180deg, #06050a 0%, #0b0712 100%);
+  overflow: hidden;
+}
+
+.heroPers-container{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 100px;
+  align-items: center;
+  margin-left: 100px;
+}
+
+/* IZQUIERDA */
+.heroPers-title{
+  margin: 0 0 14px;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 800;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  line-height: .95;
+  font-size: clamp(44px, 5vw, 82px);
+  color: #fff;
+  text-shadow: 0 0 40px rgba(255,255,255,.12);
+}
+
+.heroPers-text{
+  margin: 0 0 22px;
+  max-width: 480px;
+  color: rgba(255,255,255,.78);
+  line-height: 1.6;
+}
+
+.heroPers-actions{
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.heroPers-btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 1px solid rgba(255,255,255,.12);
+  transition: transform .15s ease, box-shadow .2s ease;
+}
+
+.heroPers-btn:hover{ transform: translateY(-2px); }
+
+.heroPers-btn-primary{
+  background: rgba(180,90,255,.18);
+  border-color: rgba(180,90,255,.45);
+  color: #fff;
+  box-shadow: 0 0 24px rgba(180,90,255,.25);
+}
+
+.heroPers-btn-outline{
+  background: rgba(0,0,0,.25);
+  border-color: rgba(255,255,255,.14);
+  color: rgba(255,255,255,.92);
+}
+
+/* DERECHA (marco para tu carrusel) */
+.heroPers-right{
+  padding: 20px;
+  border-radius: 22px;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: 0 0 50px rgba(170,80,255,.10);
+
+}
+
+/* Responsive */
+@media (max-width: 980px){
+  .heroPers-container{
+    grid-template-columns: 1fr;
+  }
+  .heroPers-right{ margin-top: 10px; }
+}

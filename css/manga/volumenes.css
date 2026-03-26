@@ -1,0 +1,145 @@
+:root{
+  --bg: #05050a;
+  --blue: #00c3ff;
+  --red: #ff1a1a;
+}
+
+body{
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: #fff;
+}
+
+.volSection{
+  padding: 40px 20px 70px;
+}
+
+/* título japonés grande */
+.jpTitle{
+  text-align: center;
+  font-size: clamp(30px, 4.5vw, 56px);
+  letter-spacing: 3px;
+  margin-bottom: 40px;
+}
+
+/* GRID 5x5 */
+.volGrid{
+  max-width: 1300px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 40px 30px;
+}
+
+/* contenedor */
+.volItem{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.volLabel{
+  position: absolute;
+  left: -52px;
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+
+  /* ✅ vertical tipo portada (no apila letras) */
+  writing-mode: vertical-rl;
+  text-orientation: mixed;   /* IMPORTANTE: NO upright */
+
+  font-weight: 1000;
+  font-size: 40px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+
+  /* neon amarillo + negro */
+  color: #080808;
+  background: #d6ff00;
+  padding: 16px 10px;
+  border-radius: 14px;
+
+  box-shadow:
+    0 0 26px rgba(214,255,0,.35),
+    0 0 55px rgba(214,255,0,.20);
+
+  border: 1px solid rgba(0,0,0,.35);
+  transition: all .25s ease;
+}
+
+/* CARD TIPO MANGA */
+.volCard{
+  width: 180px;
+  height: 280px;
+  border-radius: 18px;
+
+  background-size: cover;
+  background-position: center;
+
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 18px 55px rgba(0,0,0,.65);
+
+  transition: all .25s ease;
+}
+
+/* HOVER ROJO */
+.volItem:hover .volCard{
+  transform: translateY(-12px);
+  border-color: var(--red);
+  box-shadow:
+    0 25px 80px rgba(0,0,0,.75),
+    0 0 45px rgba(255,26,26,.45);
+  filter: saturate(1.2) contrast(1.1);
+}
+
+.volItem:hover .volLabel{
+  background: #ff1a1a;      /* rojo */
+  color: #050505;           /* negro */
+  box-shadow:
+    0 0 30px rgba(255,26,26,.55),
+    0 0 60px rgba(255,26,26,.22);
+}
+
+/* RESPONSIVE */
+@media(max-width: 1200px){
+  .volGrid{ grid-template-columns: repeat(4, 1fr); }
+}
+@media(max-width: 900px){
+  .volGrid{ grid-template-columns: repeat(3, 1fr); }
+}
+@media(max-width: 600px){
+  .volGrid{ grid-template-columns: repeat(2, 1fr); }
+  .volLabel{ font-size: 32px; left: -36px; }
+}
+
+/* ✅ tus imágenes */
+.v1  { background-image: url("../../assets/v1.webp"); }  
+.v2  { background-image: url("../../assets/v2.webp"); }  
+.v3  { background-image: url("../../assets/v3.webp"); }  
+.v4  { background-image: url("../../assets/v4.webp"); }  
+.v5  { background-image: url("../../assets/v5.webp"); }  
+.v6  { background-image: url("../../assets/v6.webp"); }  
+.v7  { background-image: url("../../assets/v7.webp"); }  
+.v8  { background-image: url("../../assets/v8.webp"); }  
+.v9  { background-image: url("../../assets/v9.webp"); }  
+.v10 { background-image: url("../../assets/v10.webp"); }  
+.v11 { background-image: url("../../assets/v11.webp"); }  
+.v12 { background-image: url("../../assets/v12.webp"); }  
+.v13 { background-image: url("../../assets/v13.webp"); }  
+.v14 { background-image: url("../../assets/v14.webp"); }  
+.v15 { background-image:  url("../../assets/v15.webp"); }  
+.v16 { background-image: url("../../assets/v16.webp"); }  
+.v17 { background-image: url("../../assets/v17.webp"); }  
+.v18 { background-image: url("../../assets/v18.webp"); }  
+.v19 { background-image: url("../../assets/v19.webp"); }  
+.v20 { background-image: url("../../assets/v20.webp"); }  
+.v21 { background-image: url("../../assets/v21.webp"); }  
+.v22 { background-image: url("../../assets/v22.webp"); }  
+
+
+.volNum{
+  font-size: 48px;
+  font-weight: 1000;
+  letter-spacing: 2px;
+}
